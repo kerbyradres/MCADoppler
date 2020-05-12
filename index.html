@@ -2,9 +2,10 @@
 <HTML lang="en">
 <HEAD>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-165603682-1"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-165603682-1">
+	</script>
 	
-  <script>
+	<script>
  		window.dataLayer = window.dataLayer || [];
  		function gtag(){dataLayer.push(arguments);}
 		gtag('js', new Date());
@@ -14,6 +15,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
 	<title>Fetal MCA Doppler Calculator</title>
 
 	<link href="css/style.css" rel="stylesheet">
@@ -27,7 +29,7 @@
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 	
-  <script>
+  	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -37,29 +39,28 @@
 	  ga('send', 'pageview');
 	</script>
   
-  <script LANGUAGE=javascript1.2>
-   function Fmt(x) { 
-      var v
-      if(x>=0) { v=''+(x+0.00005) } else { v=''+(x-0.00005) }
-      return v.substring(0,v.indexOf('.')+3)
-   }
+  	<script LANGUAGE=javascript1.2>
+   		function Fmt(x) { 
+      		var v
+      		if(x>=0) { v=''+(x+0.00005) } else { v=''+(x-0.00005) }
+      		return v.substring(0,v.indexOf('.')+3)
+   		}
 
-   function compute(form) {
-	    if((form.ega.value)<18 || (form.ega.value)> 40 ) 
-        {alert("The gestational age is out of range (18 to 40 weeks)"); }
-      else{
-  		    var ega =  .0464*(form.ega.value)
-          form.mmca.value= Fmt(10.071*(Math.pow(2.7182818,ega)));
-	        form.mom.value=Fmt(form.mca.value/form.mmca.value)}
-   }
+   		function compute(form) {
+	    	if((form.ega.value)<18 || (form.ega.value)> 40) 
+			{alert("The gestational age is out of range (18 to 40 weeks)"); }
+      		else
+			{var ega =  .0464*(form.ega.value)
+         		form.mmca.value= Fmt(10.071*(Math.pow(2.7182818,ega)));
+	        	form.mom.value=Fmt(form.mca.value/form.mmca.value)}
+  		}
 
-	 function ClearForm(form) {
-	    form.ega.value = "";
-		  form.mca.value = "";
-		  form.mmca.value = "";
-		  form.mom.value = "";
-	 }
-
+	 	function ClearForm(form) {
+	    		form.ega.value = "";
+		  	form.mca.value = "";
+		  	form.mmca.value = "";
+		  	form.mom.value = "";
+	 	}
 </script>
 
 </HEAD>
@@ -69,23 +70,20 @@
 <div class="text-center"><h1><b>Fetal MCA Doppler Calculator</b></h1></div>
 
 <div>
-<tr>
-<td width="740" height="1" colspan="2" valign="top">
-<table border="0" cellpadding="6" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="731" id="AutoNumber2" height="1">
-<tbody><tr>
-<td width="534" height="19" valign="TOP">
-<p><font size="-1" face="ARIAL">The proximal middle cerebral artery is
-enlarged to to occupy more than 50% of the image and <a href="http://www.perinatology.com/images/MCA.jpg" target="_blank">is sampled 2 mm after
-its origin from the internal carotid artery</a>. The angle of the ultrasound beam and the direction of blood flow should be zero degrees. The risk of anemia is highest in fetuses with a
-pre-transfusion peak systolic velocity of 1.5 times the median or higher.</font> </p>
-<table border="0" cellpadding="0" cellspacing="0" cols="1" width="656" height="160">
-<tbody>
-<tr>
-<td width="656" bgcolor="#ECECFF" height="73">
-<form>
-<p><font face="Arial"><b><font size="2">ENTER:<br>Gestational age (weeks)&nbsp;</font><input name="ega" size="4"><font size="2">
-<br>Observed MCA Peak Systolic Velocity (cm/sec)</font><input name="mca" size="4"><font size="2"> <br>&nbsp; </font></b> </font>
-</p>
+	<tr>
+		<td width="740" height="1" colspan="2" valign="top">
+		<table border="0" cellpadding="6" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="731" id="AutoNumber2" height="1">
+		<tbody><tr>
+		<td width="534" height="19" valign="TOP">
+		<p><font size="-1" face="ARIAL">The proximal middle cerebral artery is enlarged to to occupy more than 50% of the image and <a href="http://www.perinatology.com/images/MCA.jpg" target="_blank">is sampled 2 mm after its origin from the internal carotid artery</a>. The angle of the ultrasound beam and the direction of blood flow should be zero degrees. The risk of anemia is highest in fetuses with a pre-transfusion peak systolic velocity of 1.5 times the median or higher.</font> </p>
+		<table border="0" cellpadding="0" cellspacing="0" cols="1" width="656" height="160">
+		<tbody>
+		<tr>
+		<td width="656" bgcolor="#ECECFF" height="73">
+	<form>
+		<p><font face="Arial"><b><font size="2">ENTER:<br>Gestational age (weeks)&nbsp;</font><input name="ega" size="4"><font size="2">
+		<br>Observed MCA Peak Systolic Velocity (cm/sec)</font><input name="mca" size="4"><font size="2"> <br>&nbsp; </font></b> </font>
+		</p>
 </form></td></tr>
 <tr>
 <td width="656" height="27">
