@@ -42,19 +42,19 @@
 	<div class="text-center"><h1><b>Fetal MCA Doppler Calculator</b></h1>
 	</div>
 	
-	<div class="card bg-dark text-white">
+	<div class="card bg-dark text-white" style="width:400px">
 		<div class="card-header">
 			<form>
 				<p><b>ENTER:<br>
-				Gestational age (weeks)&nbsp; <input name="ega"><br> 
-				Observed MCA Peak Systolic Velocity (cm/sec)&nbsp; <input name="mca"><br></b></p>
-				<p align="center"><b><input onclick="compute(this.form)" type="button" value="Calculate">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b>
-			  	<input onclick="ClearForm(this.form)" type="button" value="Clear Form"></p>
+				Gestational Age (weeks):&nbsp; <input name="ega"><br> 
+				Observed MCA PSV (cm/sec):&nbsp; <input name="mca"><br></b></p>
+				<p><b><input onclick="compute(this.form)" type="button" value="Calculate">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			  	<input onclick="ClearForm(this.form)" type="button" value="Clear Form"></b></p>
 		</div>
 
 		<div class="card-body">
-			<p>The Median Peak Systolic Velocity for this age is &nbsp;<input name="mmca"><br> 
-			Your measurement is <input name="mom" size="4"><font size="2">&nbsp;Multiples of Median</p>
+			<p><b>The Median Peak Systolic Velocity for this age is &nbsp;<input name="mmca"><br> 
+			Your measurement is <input name="mom" size="4"><font size="2">&nbsp;Multiples of Median</b></p>
 			</form>
 		</div>
 
