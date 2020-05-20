@@ -44,19 +44,23 @@
 	
 	<div class="card bg-dark text-white" style="width:900px">
 		<div class="card-header">
-			<h5>Fetal MCA Doppler Calculator
+			<h5><b>Fetal MCA Doppler Calculator</b></h5>
 		</div>
 
 		<div class="card-body">
 			<form>
 				<p><b>Gestational Age:&nbsp; <input name="ega"><br> 
-				Observed MCA PSV:&nbsp; <input name="mca"><br>
+				Observed MCA PSV:&nbsp; <input name="mca"><br><br>
 				<input onclick="compute(this.form)" type="button" value="Calculate">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-			  	<input onclick="ClearForm(this.form)" type="button" value="Clear Form"><br>
-				Median PSV for this age is &nbsp;<input name="mmca"><br> 
-				Your measurement is <input name="mom">&nbsp;Multiples of Median</b></p>
+			  	<input onclick="ClearForm(this.form)" type="button" value="Clear Form"></b></p><br>
 			</form>
 		</div>
+		
+		<div class="card-footer">
+			<form>
+				<p><b>Median PSV for this age is &nbsp;<input name="mmca"><br> 
+				Your measurement is <input name="mom">&nbsp;Multiples of Median</b></p>
+			</form>
 </BODY>
 
 </HTML>
