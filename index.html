@@ -12,26 +12,28 @@
   
   	<script LANGUAGE=javascript1.2>
    		function Fmt(x) { 
-      		var v
-      		if(x>=0) { v=''+(x+0.00005) } else { v=''+(x-0.00005) }
-      		return v.substring(0,v.indexOf('.')+3)
+      			var v
+      			if(x>=0) {v=''+(x+0.00005)} 
+			else {v=''+(x-0.00005)}
+      			return v.substring(0,v.indexOf('.')+3)
    		}
 
    		function compute(form) {
-	    	if((form.ega.value)<18 || (form.ega.value)> 40) 
-			{alert("The gestational age is out of range (18 to 40 weeks)"); }
-      		else
-			{var ega =  .0464*(form.ega.value)
-         		form.mmca.value= Fmt(10.071*(Math.pow(2.7182818,ega)));
-	        	form.mom.value=Fmt(form.mca.value/form.mmca.value)}
-  		}
+	    		if((form.ega.value)<18 || (form.ega.value)>40) 
+				{alert("The gestational age is out of range (18 to 40 weeks)");
+				}
+      			else
+				{var ega = 0.0464*(form.ega.value)
+         			form.mmca.value = Fmt(10.071*(Math.pow(2.7182818,ega)));
+	        		form.mom.value = Fmt(form.mca.value/form.mmca.value)};
+  				}
 
 	 	function ClearForm(form) {
 	    		form.ega.value = "";
 		  	form.mca.value = "";
 		  	form.mmca.value = "";
 		  	form.mom.value = "";
-	 	}
+	 		}
 	</script>
 	
 </HEAD>
@@ -40,32 +42,19 @@
 	<div class="text-center"><h1><b>Fetal MCA Doppler Calculator</b></h1>
 	</div>
 	
-	<table border="0" cellpadding="0" cellspacing="0" cols="1" width="656" height="160">
-		<tbody>
-			<tr>
-				<td width="656" height="73">
-				<form>
-					<p><b>ENTER:<br>
-						Gestational age (weeks)&nbsp; <input name="ega"><br> 
-						Observed MCA Peak Systolic Velocity (cm/sec)&nbsp; <input name="mca"><br></b></p>
-		  		</form>
-				</td>
-			</tr>
-      			<tr>
-        			<td width="656" height="27">
-          				<p align="center"><font face="Arial"><b><input onclick="compute(this.form)" type="button" value="Calculate">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b> </font>
-		  			<input onclick="ClearForm(this.form)" type="button" value="Clear Form"></p></td></tr>
-      <tr>
-        <td width="656" height="60">
-		 <b> <font size="2" face="ARIAL">Calculations:<br> </font>
-        <font color="#000000" face="Arial,Helvetica"><font size="2">&nbsp;The Median Peak Systolic Velocity for this age is &nbsp;</font><input name="mmca" size="4"></font><font size="2">
-		  <br> </font><font color="#000000" face="Arial,Helvetica"><font size="2">Your measurement is
-        </font> <input name="mom" size="4"><font size="2">&nbsp;Multiples of Median
-        </font> </font> </b>
-				  
-		  </td></tr>
-      <tr>
-        <td width="656" height="1"></td></tr></tbody></table>
+	<div class="card bg-dark text-white">
+		<div class="card-header">
+			<form>
+				<p><b>ENTER:<br>
+				Gestational age (weeks)&nbsp; <input name="ega"><br> 
+				Observed MCA Peak Systolic Velocity (cm/sec)&nbsp; <input name="mca"><br></b></p>
+		  	</form>
+		</div>
+
+		<div class="card-body">
+			<p align="center"><b><input onclick="compute(this.form)" type="button" value="Calculate">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b>
+		  	<input onclick="ClearForm(this.form)" type="button" value="Clear Form"></p>
+		</div>
 
 </BODY>
 
