@@ -40,11 +40,21 @@
 	<div class="text-center"><h1><b>Fetal MCA Doppler Calculator</b></h1>
 	</div>
 	
-	<table border="0" cellpadding="6" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="731" id="AutoNumber2" height="1">
+	<table id="AutoNumber2">
   		<thead>
     			<tr>
-      				<th></th>
-      				<th></th>
+      				<th>
+					<form>
+						<p>ENTER:<br>
+						Gestational age (weeks)&nbsp;<input name="ega"><br>
+						Observed MCA Peak Systolic Velocity (cm/sec)<input name="mca"><br>
+						&nbsp;</p>
+					</form>
+				</th>
+      				<th>
+					<input onclick="compute(this.form)" type="button" value="Calculate">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+					<input onclick="ClearForm(this.form)" type="button" value="Clear Form">
+				</th>
     			</tr>
   		</thead>
   		<tbody>
@@ -58,85 +68,7 @@
     			</tr>
   		</tbody>
 
-	<div>
-		<tr>
-			<td width="740" height="1" colspan="2" valign="top">
-					<tbody>
-		<tr>
-		<td width="534" height="19" valign="TOP">
-		<p><font size="-1" face="ARIAL">The proximal middle cerebral artery is enlarged to to occupy more than 50% of the image and <a href="http://www.perinatology.com/images/MCA.jpg" target="_blank">is sampled 2 mm after its origin from the internal carotid artery</a>. The angle of the ultrasound beam and the direction of blood flow should be zero degrees. The risk of anemia is highest in fetuses with a pre-transfusion peak systolic velocity of 1.5 times the median or higher.</font></p>
-		<table border="0" cellpadding="0" cellspacing="0" cols="1" width="656" height="160">
-		<tbody>
-	<tr>
-		<td width="656" bgcolor="#ECECFF" height="73">
-	<form>
-		<p><font face="Arial"><b><font size="2">ENTER:<br>Gestational age (weeks)&nbsp;</font><input name="ega" size="4"><font size="2">
-		<br>Observed MCA Peak Systolic Velocity (cm/sec)</font><input name="mca" size="4"><font size="2"> <br>&nbsp; </font></b> </font>
-		</p>
-	</form>
-		</td>
-			</tr>
-
-<tr>
-<td width="656" height="27">
-<p align="center"><font face="Arial"><b><input onclick="compute(this.form)" type="button" value="Calculate">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b> </font>
-<input onclick="ClearForm(this.form)" type="button" value="Clear Form"></p></td></tr>
-<tr>
-<td width="656" height="60">
-<b> <font size="2" face="ARIAL">Calculations:<br> </font>
-<font color="#000000" face="Arial,Helvetica"><font size="2">&nbsp;The Median Peak Systolic Velocity for this age is &nbsp;</font><input name="mmca" size="4"></font><font size="2">
-<br> </font><font color="#000000" face="Arial,Helvetica"><font size="2">Your measurement is
-</font> <input name="mom" size="4"><font size="2">&nbsp;Multiples of Median
-</font> </font> </b>
-</td></tr>
-<tr>
-<td width="656" height="1"></td></tr></tbody></table>
-<p>
-</p><hr noshade="" color="#000000" size="1">
-<p align="left"><font face="Arial" size="-2">REFERENCES:<br>
-<br>1. Mari G. Noninvasive diagnosis by Doppler ultrasonography of fetal anemia due to maternal red-cell alloimmunization. N Engl J Med 2000; 342:9-14
-Obstet. 1998 ;63:195-202.
-<a href="http://www.ncbi.nlm.nih.gov:80/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;list_uids=10620643&amp;dopt=Abstract" target="_blank">MEDLINE</a>
-<br>2. Delle Chiaie L, et al., Prediction of fetal anemia with
-Doppler measurement of the middle cerebral artery peak systolic velocity
-in pregnancies complicated by maternal blood group alloimmunization or
-parvovirus B19 infection.
-Ultrasound Obstet Gynecol. 2001;18:232-6.
-<a href="http://www.ncbi.nlm.nih.gov:80/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;list_uids=11555452&amp;dopt=Abstract" target="_blank">MEDLINE</a>
-<br>3. Nishie EN, A comparison between middle cerebral artery
-peak systolic velocity and amniotic fluid optical density at 450 nm in the
-prediction of fetal anemia.
-Am J Obstet Gynecol. 2003 ;188:214-9.
-<a href="http://www.ncbi.nlm.nih.gov:80/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;list_uids=12548220&amp;dopt=Abstract" target="_blank" "="">MEDLINE</a>
-<br>4. Pereira L, et al., Conventional management of maternal
-red cell alloimmunization compared with management by Doppler assessment
-of middle cerebral artery peak systolic velocity.
-Am J Obstet Gynecol. 2003 ;189:1002-6.
-<a href="http://www.ncbi.nlm.nih.gov:80/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;list_uids=14586344&amp;dopt=Abstract" target="_blank">MEDLINE</a>
-<br>5. Abel DE, et al. ,Ultrasound assessment of the fetal
-middle cerebral artery peak systolic velocity: A comparison of the
-near-field versus far-field vessel.
-Am J Obstet Gynecol. 2003;189:986-9.
-<a href="http://www.ncbi.nlm.nih.gov:80/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;list_uids=14586340&amp;dopt=Abstract" target="_blank">MEDLINE</a>
-<br>6. Alshimmiri MM,et al., Prediction of fetal anemia by
-middle cerebral artery peak systolic velocity in pregnancies complicated
-by rhesus isoimmunization.
-J Perinatol. 2003;23:536-40.
-<a href="http://www.ncbi.nlm.nih.gov:80/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;list_uids=14566348&amp;dopt=Abstract" target="_blank">MEDLINE</a>
-</font>
-</p><p align="left">
-<font size="2" face="Arial">
-<b>
-<font size="-1" face="Arial">All calculations must be confirmed before use. The suggested results are not a substitute for clinical
-judgment. Neither Perinatology.com nor any other party involved in the preparation or publication of this site shall be liable for any special, consequential,
-or exemplary damages resulting in whole or part from any user's use of or reliance upon this material.</font><font face="Arial"> </font></b><font face="Arial" size="-2">
-
-</font></font></p></td>
-</tr>
-</tbody></table>
-</td>
-</tr>
-</div>
+	</table>
 
 </BODY>
 
