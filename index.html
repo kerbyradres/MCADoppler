@@ -51,21 +51,32 @@
 			<form>
 				<table>
 					<tr>
-						<td><p><b>Gestational Age:</td> 
+						<td><p><b>Gestational Age:</b></td> 
 						<td><input name="ega"><br></td> 
 					</tr>
 					<tr>
-						<td>Observed MCA PSV:</td>
+						<td><b>Observed MCA PSV:</b></td>
 						<td><input name="mca"><br></td>
 					</tr>
 				</table>
-				<input onclick="compute(this.form)" type="button" value="Calculate">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-			  	<input onclick="ClearForm(this.form)" type="button" value="Clear Form"></b></p><br>
+				<br><br>
+				<div align="center">
+					<input onclick="compute(this.form)" type="button" value="Calculate"> 
+			  		<input onclick="ClearForm(this.form)" type="button" value="Clear Form"></b></p><br>
+				<div>
 		</div>
 		
 		<div class="card-footer">
-				<p><b>Median PSV for this age is &nbsp;<input name="mmca"><br> 
-				Your measurement is    <input name="mom">&nbsp;Multiples of Median</b></p>
+				<table>
+					<tr>
+						<td><p><b>Median PSV for this age is:</td> 
+						<td><input name="mmca"></td> 
+					</tr>
+					<tr>
+						<td>Result:</td>
+						<td><input name="mom">&nbsp;Multiples of Median</td>
+					</tr>
+				</table> 
 			</form>
 		</div>
 </BODY>
